@@ -1,0 +1,35 @@
+const express = require('express')
+const Joi = require('joi')
+const app = express()
+app.use(express.json())//Middle layer
+const mysql = require('mysql')
+var connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'dm',
+    password: '1234',
+    database: 'discussion_manager'
+  })  
+connection.connect((error)=>{
+    if(error){
+        throw error
+    }
+    console.log("Mysql connected .....")
+})
+
+app.get('/allUsers',(req,res)=>{
+    connection.query("SELECT * FROM users", function (err, result, fields) {
+        if (err){
+            res.status(400).send(err);
+        }else{
+            console.log(result);
+            res.send(result)
+        } 
+        
+      });
+})
+
+// conecting to database
+const p = process.env.PORT || 3000 //this port number will be initilized outside this application
+app.listen(p,()=>{
+    console.log(`API is running on port  ${p}`)
+})

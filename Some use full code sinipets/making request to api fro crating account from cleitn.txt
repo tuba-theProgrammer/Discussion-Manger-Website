@@ -1,0 +1,34 @@
+  const login = () =>
+  {
+
+    let user ={
+      displayName:"Zee",
+      email:"zeeshanahmed6339@gmail.com",
+      password:"zee1234",
+      phoneNumber:"+923051202329",
+      onlineStatus:"Active",
+      address:"no where"
+    }
+     
+  fetch('http://localhost:8000/accountsService/createAccountWithEmail',
+  {
+    //BODY
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json;charset=utf-8'
+  },
+
+  body: JSON.stringify(user)
+
+  }).then(response => {
+    // console.log(response.json())
+    return response.json()
+  })
+  .then(data => {
+    console.log(data.responseMessage.message)
+  });
+
+  }    
+
+
+{"responseMessage":"Login Successfull","responseCode":1,"userId":"0TFdiLUfj8Vq0Qtoz14jAhNuGu03"}

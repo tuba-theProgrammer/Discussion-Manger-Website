@@ -1,0 +1,63 @@
+# Web-Engineering-2021-Project-ProjectDiscussionManager
+
+Following are the list of resources which we have used to learn abour REACT, NdoeJs and Express Applications.
+
+	Firebase account email: ApplicationProgramInterface0.1@gmail.com and pass : api_version0.1
+
+Resources:
+	
+	1.Creating simple node js express application (This will be our API ) : https://www.sitepoint.com/create-new-express-js-apps-with-express-generator/
+	2.How To Connect React JS With Node JS | Node JS Tutorial For Beginners | What Is Node JS | : https://www.youtube.com/watch?v=fnpmR6Q5lEc
+	3.React Getting Started : https://www.w3schools.com/react/react_getstarted.asp
+	4.Main basic concept of creating resp API along with creation of END POINTS of an API. : https://www.youtube.com/watch?v=pKd0Rpw7O48
+	5.Conneting commands for connecting express application to server : https://www.w3schools.com/nodejs/nodejs_mysql.asp
+	6.Methods for firebase authentication : https://firebase.google.com/docs/auth/web/password-auth?authuser=5
+	7.Reference for idea : https://github.com/ThisIsRudigo/firebaseauth
+	8.For Google Sin in default authentication and other options : https://github.com/firebase/firebaseui-web
+	9.For Google Sin in default authentication and other options (Video ): https://www.youtube.com/watch?v=hb85pYZSJaI
+	10.For Admin auth API : https://firebase.google.com/docs/admin/setup
+	11.For learnig concept of React router DOM : https://www.youtube.com/watch?v=1N_Vh0bRK3c
+	12.Using Hooks : https://www.youtube.com/watch?v=mxK8b99iJTg
+	13: Programatically routing concept : https://ultimatecourses.com/blog/programmatically-navigate-react-router
+	14: Using fetch method in client app for making an request to API
+
+Command:
+	
+	For creating REACT Application
+		->npm install -g create-react-app
+		->npx create-react-app myfirstreact
+		->cd myfirstreact
+		->npm start
+
+	For creating Node js express Application
+		->npm install express-generator -g
+		->express myapp
+		->cd myapp
+		->npm install
+		->npm start
+		->Then browse to http://localhost:3000 in your browser.
+
+	For enabling the cross origin communication of REACT with API
+		->npm install --save cors
+		Note: 
+				in react then declarre cors = require('cors')			
+				in react then add app.user(cors())
+
+	When installing nodemon : open windows power shell and use this command : Set-ExecutionPolicy Unrestricted
+
+	For installing the Joi package (For input validations)
+		->npm i joi
+		->npm uninstall --save @hapi/joi
+		->npm install --save @hapi/joi@15.0.3
+	For MYSQL connection
+		->npm install mysql
+	For firebase
+		->npm install --save firebase
+	For Admin Auth API : (USED)
+		->npm install firebase-admin --save
+		->npm install @firebase/webchannel-wrapper --save-exact
+
+	For REACT components
+		->npm install react-avatar --save
+		-> npm i --save react-loadingmask
+			->import LoadingMask from "react-loadingmask";
